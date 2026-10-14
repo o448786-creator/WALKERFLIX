@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>walkerflix</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.jpeg">
+</head>
+<body>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="menu-fixo">
+        <div class="logo">WALKERFLIX</div>
+        <ul>
+            <li><a href="#drama">Drama</a></li>
+            <li><a href="#terror">Terror</a></li>
+            <li><a href="#aventura">Aventura</a></li>
+            <li><a href="#series">Séries</a></li>
+        </ul>
+        <div class="busca-container">
+            <input type="text" id="inputBusca" placeholder="Pesquisar filme...">
+            <button style="background:none; border:none; color:aqua;">🔍</button>
+        </div>
+    </nav>
+
+    <!-- BANNER PRINCIPAL -->
+    <div class="banner" id="meuBanner">
+        <div class="banner-conteudo">
+            <h2 id="tituloBanner">Carregando...</h2>
+            <p id="descBanner">Descrição...</p>
+            <button class="botao-assistir">Assistir Agora</button>
+        </div>
+    </div>
+
+    <!-- SEÇÃO PRINCIPAL DE CONTEÚDO -->
+    <div id="conteudo-filmes">
+        
+        <!-- CATEGORIA: DRAMA E COMÉDIA -->
+        <h2 class="titulo-categoria" id="drama">Drama e Comédia</h2>
+        <div class="fileira-principal">
+            <div class="container">
+                <video controls poster="Um Lugar para Recomeçar.jpeg">
+                    <source src="Filmes Completos Dublados fantasia e drama 720p.mp4" type="video/mp4">
+                </video>
+                <h1>Um Lugar para Recomeçar</h1>
+            </div>
+            <div class="container">
+                <video controls poster="pixels.jpeg">
+                    <source src="PIXELS _ FILME COMPLETO DUBLADO EM PORTUGUÊS.mp4" type="video/mp4">
+                </video>
+                <h1>PIXELS</h1>
+            </div>
+            <div class="container">
+                <video controls poster="PONTE PARA TERABITIA.jpeg">
+                    <source src="Filmes Completos Dublados fantasia e drama 720p.mp4" type="video/mp4">
+                </video>
+                <h1>Ponte para Terabitia</h1>
+            </div>
+            <div class="container">
+                <video controls poster="Screenshot 2026-05-28 13.44.02.png">
+                    <source src="PIXELS _ FILME COMPLETO DUBLADO EM PORTUGUÊS.mp4" type="video/mp4">
+                </video>
+                <h1>Dois Malucos na TV</h1>
+            </div>
+        </div>
+
+        <!-- CATEGORIA: TERROR E SUSPENSE -->
+        <h2 class="titulo-categoria" id="terror">Terror e Suspense</h2>
+        <div class="fileira-principal">
+            <div class="container">
+                <video controls poster="Jester A morte sorri.jpeg">
+                    <source src="Jester A morte sorri Filme de terror completo dublado .mp4" type="video/mp4">
+                </video>
+                <h1>Jester a Morte Sorri</h1>
+            </div>
+            <div class="container">
+                <video controls poster="banner ghost rider.jpeg">
+                    <source src="Motoqueiro Fantasma - Espírito de Vingança (2011) · Dublado Português.mp4" type="video/mp4">
+                </video>
+                <h1>Motoqueiro Fantasma</h1>
+            </div>
+        </div>
+
+        <!-- CATEGORIA: AÇÃO E AVENTURA -->
+        <h2 class="titulo-categoria" id="aventura">Ação e Aventura</h2>
+        <div class="fileira-principal">
+            <div class="container">
+                <video controls poster="A Ilha Misteriosa 1.jpeg">
+                    <source src="A Ilha Misteriosa FILME COMPLETO DUBLADO _ Filmes de Aventura _ Patrick Stewart & Kyle MacLachlan.mp4" type="video/mp4">
+                </video>
+                <h1>A Ilha Misteriosa</h1>
+            </div>
+            <div class="container">
+                <video controls poster="esquadrão suicida.jpeg">
+                    <source src="ESQUADRÃO SUICIDA FILME COMPLETO DUBLADO EM PORTUGUÊS HD.mp4" type="video/mp4">
+                </video>
+                <h1>Esquadrão Suicida</h1>
+            </div>
+            <div class="container">
+                <video controls poster="deadpool e wolverine.jpeg">
+                    <source src="Deadpool _ O Anti-Herói MAIS INSANO da Marvel 🔥💀 Filme Completo Dublado HD.mp4" type="video/mp4">
+                </video>
+                <h1>Deadpool e Wolverine</h1>
+            </div>
+            <div class="container">
+                <video controls poster="rota de fuga.jpeg">
+                    <source src="Rota de Fuga COM SYLVESTER STALLONE E SCHWARZENEGGER! __ Filme Completo Dublado __ Ação __ Film Plus.mp4" type="video/mp4">
+                </video>
+                <h1>Rota de Fuga</h1>
+            </div>
+            <div class="container">
+                <video controls poster="homem aranha 1.jpeg">
+                    <source src="FILME DO HOMEM ARANHA COMPLETO E DUBLADO.mp4" type="video/mp4">
+                </video>
+                <h1>Homem Aranha 1</h1>
+            </div>
+            <div class="container">
+                <video controls poster="Solomon Kane - O Caçador de Demônios.jpeg">
+                    <source src="FILME DO HOMEM ARANHA COMPLETO E DUBLADO.mp4" type="video/mp4">
+                </video>
+                <h1>Solomon Kane - O Caçador de Demônios</h1>
+            </div>
+        </div>
+
+        <!-- CATEGORIA: SÉRIES (CORRIGIDA EM FILEIRA LADO A LADO) -->
+        <h2 class="titulo-categoria" id="series">Séries</h2>
+<div class="fileira-principal"> 
+  <div class="container"> 
+    <div class="serie-card" onclick="abrirEpisodios('modal-classroom')"> 
+      <img src="capa serie classroom of the elit.png" alt="Capa Classroom of the Elite"> 
+      <h3>Classroom of the Elite</h3> 
+      <button class="botao-ep">Ver Episódios</button> 
+    </div> 
+  </div> 
+  <div class="container"> 
+    <div class="serie-card" onclick="abrirEpisodios('modal-deathnote')"> 
+      <img src="death note capa.png" alt="Capa Death Note"> 
+      <h3>Death Note</h3> 
+      <button class="botao-ep">Ver Episódios</button> 
+    </div> 
+  </div> 
+  <div class="container"> 
+    <div class="serie-card" onclick="abrirEpisodios('modal-ultramam')"> 
+      <img src="Ultraman poster.jpeg" alt="Capa Ultraman"> 
+      <h3>Ultraman</h3> 
+      <button class="botao-ep">Ver Episódios</button> 
+    </div> 
+  </div> 
+</div> 
+
+<!-- MODAIS DE EPISÓDIOS DAS SÉRIES --> 
+<div id="modal-classroom" class="modal"> 
+  <div class="modal-conteudo"> 
+    <span onclick="fecharEpisodios('modal-classroom')" class="fechar">&times;</span> 
+    <h2>Episódios: Classroom of the Elite</h2> 
+    <ul> 
+      <li><a href="#" onclick="trocarVideo('player-classroom', 'series/classroom/ep1.mp4')">Episódio 1</a></li> 
+      <li><a href="#" onclick="trocarVideo('player-classroom', 'series/classroom/ep2.mp4')">Episódio 2</a></li> 
+    </ul> 
+    <video id="player-classroom" controls width="100%" style="margin-top: 15px;">
+      Seu navegador não suporta vídeo.
+    </video>
+  </div> 
+</div> 
+
+<div id="modal-deathnote" class="modal"> 
+  <div class="modal-conteudo"> 
+    <span onclick="fecharEpisodios('modal-deathnote')" class="fechar">&times;</span> 
+    <h2>Episódios: Death Note</h2> 
+    <ul> 
+      <li><a href="#" onclick="trocarVideo('player-deathnote', 'series/deathnote/ep1.mp4')">Episódio 1</a></li> 
+      <li><a href="#" onclick="trocarVideo('player-deathnote', 'series/deathnote/ep2.mp4')">Episódio 2</a></li> 
+    </ul> 
+    <video id="player-deathnote" controls width="100%" style="margin-top: 15px;">
+      Seu navegador não suporta vídeo.
+    </video>
+  </div> 
+</div> 
+
+<div id="modal-ultramam" class="modal"> 
+  <div class="modal-conteudo"> 
+    <span onclick="fecharEpisodios('modal-ultramam')" class="fechar">&times;</span> 
+    <h2>Episódios: Ultraman</h2> 
+    <ul> 
+      <li><a href="#" onclick="trocarVideo('player-ultraman', 'series/ultraman/ep1.mp4')">Episódio 1</a></li> 
+      <li><a href="#" onclick="trocarVideo('player-ultraman', 'Classroom of the Elite - episódio 2 Dublado .mp4')">Episódio 2</a></li> 
+    </ul> 
+    <video id="player-ultraman" controls width="100%" style="margin-top: 15px;">
+      Seu navegador não suporta vídeo.
+    </video>
+  </div> 
+</div>
+
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="logo-rodape">WALKERFLIX</div>
+        <p>&copy; 2026 Desenvolvido por Seu Nome - Walkerflix</p>
+        <div class="redes-sociais">
+            <a href="#">Instagram</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+            <a href="#">TikTok</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

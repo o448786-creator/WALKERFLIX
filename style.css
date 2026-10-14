@@ -1,0 +1,415 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 70px;
+}
+
+
+/* ... todo o resto do seu CSS aqui ... */
+
+
+/* ESTA É A MÁGICA PARA FICAR LADO A LADO */
+
+.fileira-principal {
+    display: flex;
+    /* Alinha os itens em linha */
+    overflow-x: auto;
+    /* Ativa o scroll horizontal */
+    gap: 20px;
+    /* Espaço entre os vídeos */
+    padding: 20px 0;
+}
+
+.container {
+    flex: 0 0 300px;
+    /* IMPORTANTE: Não deixa o vídeo encolher e define a largura dele */
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.nomesite {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 0;
+    border: 5px solid aqua;
+    /* Diminuí um pouco a borda para não ocupar a tela toda */
+    margin-bottom: 20px;
+}
+
+
+/* Deixa a barra de rolagem visível e estilizada */
+
+.fileira-principal::-webkit-scrollbar {
+    height: 8px;
+}
+
+.fileira-principal::-webkit-scrollbar-thumb {
+    background: aqua;
+    border-radius: 10px;
+}
+
+
+/* Deixa o título do filme menor e elegante */
+
+.container h1 {
+    font-size: 14px;
+    /* Tamanho de legenda */
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #ccc;
+    /* Cinza claro para não cansar a vista */
+    font-weight: bold;
+}
+
+
+/* Suaviza o deslize do scroll (efeito premium) */
+
+.fileira-principal {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 25px;
+    /* Espaço extra para a barra não colar no texto */
+}
+
+
+/* Efeito de destaque ao passar o mouse no vídeo */
+
+.container video:hover {
+    border-color: aqua;
+    /* Combina com a cor do seu site */
+    transform: scale(1.03);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    /* Altura do banner */
+    background-image: linear-gradient(to top, black, transparent), url('Um Lugar para Recomeçar.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    /* Coloca o texto na parte de baixo */
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.banner-conteudo {
+    padding: 40px;
+    max-width: 600px;
+}
+
+.banner-titulo {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-descricao {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.botao-assistir {
+    background-color: aqua;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-assistir:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+
+/* Efeito de destaque ao passar o mouse */
+
+.container:hover {
+    transform: scale(1.1);
+    /* Aumenta um pouco o tamanho */
+    transition: transform 0.4s ease;
+    /* Deixa o movimento suave */
+    z-index: 10;
+    /* Garante que o filme em destaque fique na frente dos outros */
+}
+
+.titulo-categoria {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 22px;
+    color: aqua;
+    /* Cor tema do seu site */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Pequeno ajuste para a fileira não ficar grudada no título */
+
+.fileira-principal {
+    padding-top: 10px;
+}
+
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Preto com leve transparência */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 1000;
+    /* Garante que o menu fique na frente de tudo */
+    box-sizing: border-box;
+}
+
+.logo {
+    color: aqua;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu-fixo ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu-fixo ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu-fixo ul li a:hover {
+    color: aqua;
+}
+
+
+/* AJUSTE IMPORTANTE: Como o menu é fixo, ele "cobre" o topo do site. 
+   Adicione este padding no body para empurrar o conteúdo para baixo. */
+
+body {
+    padding-top: 60px;
+}
+
+.busca-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #444;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+.busca-container:focus-within {
+    border-color: aqua;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.busca-container input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    width: 150px;
+    /* Tamanho da barra */
+    transition: width 0.4s;
+}
+
+
+/* Efeito de expandir a barra ao clicar */
+
+.busca-container input:focus {
+    width: 250px;
+}
+
+.busca-container button {
+    background: transparent;
+    border: none;
+    color: aqua;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.rodape {
+    background-color: #111;
+    border-top: 2px solid aqua;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo-rodape {
+    color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rodape p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes-sociais a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+
+/* Fundo escuro atrás do modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    /* Acima do menu fixo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* A caixa branca/preta no meio */
+
+.modal-conteudo {
+    background-color: #111;
+    margin: 10% auto;
+    padding: 30px;
+    border: 2px solid aqua;
+    width: 50%;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.botao-fechar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: aqua;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#modalTitulo {
+    color: aqua;
+    margin-bottom: 20px;
+}
+
+#modalDescricao {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+
+/* --- AJUSTES PARA CELULARES (Telas menores que 768px) --- */
+
+@media (max-width: 768px) {
+    /* 1. Menu: Empilha a logo e os links */
+    .menu-fixo {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .menu-fixo ul {
+        gap: 10px;
+        margin: 10px 0;
+    }
+    /* 2. Busca: Deixa a barra de busca 100% na largura do celular */
+    .busca-container {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .busca-container input {
+        width: 100% !important;
+    }
+    /* 3. Banner: Diminui a altura e o texto para não cobrir a tela toda */
+    .banner {
+        height: 300px;
+    }
+    .banner-conteudo h2 {
+        font-size: 22px;
+    }
+    .banner-desc {
+        font-size: 14px;
+    }
+    /* 4. Filmes: Diminui o tamanho das capas para caberem melhor */
+    .container {
+        flex: 0 0 200px;
+        /* Capas menores no celular */
+    }
+    /* 5. Espaço no topo: O menu fixo ficou maior, então empurramos o conteúdo */
+    body {
+        padding-top: 140px;
+    }
+    /* 6. Modal: Faz a janela de detalhes ocupar quase toda a tela do celular */
+    .modal-conteudo {
+        width: 90%;
+        margin: 20% auto;
+        padding: 20px;
+    }
+}
+
+
+.serie-card { width: 200px; cursor: pointer; text-align: center; font-family: sans-serif; }
+.serie-card img { width: 100%; border-radius: 8px; }
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000000b3; }
+.modal-conteudo { background:rgba(0, 0, 0, 0.8); width: 300px; margin: 15% auto; padding: 20px; border-radius: 8px; position: relative; }
+.fechar { position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; }
